@@ -10,4 +10,4 @@ source /usr/share/yunohost/helpers
 
 # Install dependencies
 sudo apt-get install -y apticron
-sed -e "s@EMAIL=\"root\"@EMAIL=\"$emails\"@ -i /etc/apticron/apticron.conf
+sudo sed -e "s#EMAIL=\"root\"#EMAIL=\"$emails\"#" -i /etc/apticron/apticron.conf
