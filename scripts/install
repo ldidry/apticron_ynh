@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Exit on command errors and treat unset variables as an error
+set -eu
+
+emails=$YNH_APP_ARG_EMAILS
+
+# Source YunoHost helpers
+source /usr/share/yunohost/helpers
+
+# Install dependencies
+sudo apt-get install -y apticron
+sed -e "s@EMAIL=\"root\"@EMAIL=\"$emails\"@ -i /etc/apticron/apticron.conf

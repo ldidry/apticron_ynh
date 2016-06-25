@@ -1,0 +1,35 @@
+{
+    "name": "YunoHost Apticron app",
+    "id": "ynapticron",
+    "packaging_format": 1,
+    "description": {
+        "en": "Be notified on packages to upgrade on your system.",
+        "fr": "Recevez une notification sur les paquets à mettre à jour sur votre system."
+    },
+    "url": "https://framagit.org/luc/apticron_ynh",
+    "license": "free",
+    "maintainer": {
+        "name": "Luc Didry",
+        "email": "luc@didry.org",
+        "url": "https://luc.frama.io"
+    },
+    "requirements": {
+        "yunohost": ">> 2.4.0"
+    },
+    "multi_instance": false,
+    "services": [
+    ],
+    "arguments": {
+        "install" : [
+            {
+                "name": "emails",
+                "type": "text",
+                "ask": {
+                    "en": "Email addresses the notifications will be send to (space separated).",
+                    "fr": "Des adresses mail auquelles seront envoyées les notifications (séparées par des espaces)."
+                },
+                "example": "john@example.org paul@example.org ringo@example.org george@example.org"
+            }
+        ]
+    }
+}
